@@ -1,6 +1,6 @@
 export function Footer() {
   return (
-    <div className="py-2 text-center bg-black text-white">
+    <div className="py-2 text-center bg-gray-900 text-white pt-5 pb-5">
       <p>
         Desenvolvido por
         <a

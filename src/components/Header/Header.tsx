@@ -1,6 +1,6 @@
 export function Header() {
   return (
-    <div className="flex justify-around items-center bg-black text-white py-5">
+    <div className="flex justify-around items-center bg-gray-900 text-white py-5">
       <a className="logo" href="/">
         <img src="/vite.svg" alt="vite logo" className="max-w-[150px]" />
       </a>

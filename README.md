@@ -1,1 +1,1 @@
-# Projeto Teste = React + TypeScript + Vite
+# Projeto Teste: React + TypeScript + Vite + Tailwind

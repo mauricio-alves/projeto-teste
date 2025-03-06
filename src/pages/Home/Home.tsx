@@ -3,10 +3,12 @@ import { Card } from "../../components/Card";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { Movie } from "../../interfaces/movie";
+import { Loading } from "../../components/Loading";
 
 export function Home() {
   const [search, setSearch] = useState("");
   const [movies, setMovies] = useState<Movie[]>([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     async function getMovies() {
@@ -17,6 +19,7 @@ export function Home() {
           }`
         );
         setMovies(response.data.results);
+        setLoading(false);
       } catch (error) {
         console.log(error);
       }
@@ -24,16 +27,19 @@ export function Home() {
     getMovies();
   }, []);
 
-  return (
+  return loading ? (
+    <Loading />
+  ) : (
     <div>
-      <div className="">
+      <div>
         <div id="form">
-          <h2>Catálogo de Filmes</h2>
+          <h1 className="m-6 text-4xl font-bold text-gray-900">
+            Catálogo de Filmes
+          </h1>
           <Search search={search} setSearch={setSearch} />
         </div>
         <div>
-          <h3>Quais filmes quer ver?</h3>
-          <div className="flex flex-wrap justify-between">
+          <div className="flex flex-wrap justify-center gap-8 mt-8">
             {movies
               .filter((movie) => {
                 return movie.original_title
