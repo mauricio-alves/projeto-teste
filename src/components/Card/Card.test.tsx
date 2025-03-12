@@ -1,5 +1,7 @@
 import { render, screen } from "@testing-library/react";
-import { Card } from "./Card"; // Ajuste o caminho de importação conforme necessário
+import { describe, it, expect } from "vitest";
+import "@testing-library/jest-dom/vitest";
+import { Card } from "./Card";
 import { Movie } from "../../interfaces/movie";
 import { MemoryRouter } from "react-router-dom";
 

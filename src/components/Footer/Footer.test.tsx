@@ -1,15 +1,17 @@
 import { render, screen } from "@testing-library/react";
-import { Footer } from "./Footer"; // Ajuste o caminho de importação conforme necessário
+import { describe, it, expect } from "vitest";
+import "@testing-library/jest-dom/vitest";
+import { Footer } from "./Footer";
 
 describe("Footer", () => {
-  test("Deve renderizar o texto 'Desenvolvido por'", () => {
+  it("Deve renderizar o texto 'Desenvolvido por'", () => {
     render(<Footer />);
 
     const textElement = screen.getByText(/desenvolvido por/i);
     expect(textElement).toBeInTheDocument();
   });
 
-  test("Deve renderizar o link com o nome 'Maurício Alves ❤️'", () => {
+  it("Deve renderizar o link com o nome 'Maurício Alves ❤️'", () => {
     render(<Footer />);
     
     const linkElement = screen.getByText(/Maurício Alves ❤️/i);

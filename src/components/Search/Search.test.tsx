@@ -1,5 +1,7 @@
 import { render, screen, fireEvent } from "@testing-library/react";
-import { Search } from "./Search"; // Ajuste o caminho do arquivo conforme necessário
+import { describe, it, expect } from "vitest";
+import "@testing-library/jest-dom/vitest";
+import { Search } from "./Search";
 import { useState } from "react";
 
 describe("Componente Search", () => {
