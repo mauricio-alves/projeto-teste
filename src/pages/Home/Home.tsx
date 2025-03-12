@@ -6,7 +6,7 @@ import { Movie } from "../../interfaces/movie";
 import { Loading } from "../../components/Loading";
 
 export function Home() {
-  const [search, setSearch] = useState("");
+  const [search, setSearch] = useState<string>("");
   const [movies, setMovies] = useState<Movie[]>([]);
   const [loading, setLoading] = useState(true);
 
