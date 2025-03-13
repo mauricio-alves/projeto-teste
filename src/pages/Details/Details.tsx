@@ -46,7 +46,7 @@ export function Details() {
               <hr className="hr-text" data-content="" />
               <div className="text-md flex justify-between px-4 my-2">
                 <span className="font-bold">
-                  2h 2min | {movie?.release_date?.split("-")[0]}
+                  {movie?.runtime} min | {movie?.release_date?.split("-")[0]}
                 </span>
                 <span className="font-bold"></span>
               </div>
